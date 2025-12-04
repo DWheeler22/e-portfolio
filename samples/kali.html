@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installing a Kali Linux VM — DJ Wheeler</title>
+  <title>Installing a Kali Linux Virtual Machine — DJ Wheeler</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -22,18 +23,23 @@
 
   <main class="container">
     <h2>Installing a Kali Linux Virtual Machine Through VMWare</h2>
-    <p class="meta">Viewing: DOCX</p>
+    <p class="meta">Viewing: PDF</p>
     <p><a class="btn btn-alt" href="../samples.html">← Back to Samples</a></p>
-    <div class="doc-preview-wrap">
-      <iframe id="doc-viewer" class="doc-preview" title="Document viewer"></iframe>
-    </div>
-
-    <p style="margin-top:0.75rem"><a class="btn" href="Installing a Kali Linux Virtual Machine Through VMWare.docx">Open original</a></p>
 
     <section class="reflection">
       <h3>Reflection</h3>
       <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
     </section>
+
+    <div class="doc-preview-wrap">
+      <div class="doc-preview-controls">
+        <a class="btn" href="pdfs/Installing a Kali Linux Virtual Machine Through VMware.pdf" download>Download PDF</a>
+        <a class="btn btn-alt" href="Installing a Kali Linux Virtual Machine Through VMware.docx" download>Download DOCX</a>
+      </div>
+      <embed src="pdfs/Installing a Kali Linux Virtual Machine Through VMware.pdf" type="application/pdf" class="doc-preview" />
+    </div>
+
+    <p style="margin-top:1rem"><a class="btn" href="../index.html">Return Home</a></p>
 
   </main>
 
@@ -51,6 +57,7 @@
         <div class="footer-box contact-box">
           <h4>Contact</h4>
           <p><a class="btn" href="mailto:dxw334@psu.edu">dxw334@psu.edu</a></p>
+          <p><a class="btn" href="https://www.linkedin.com/in/donwheeleriii/" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
       </div>
       <div class="footer-right">
@@ -61,16 +68,6 @@
 
   <script>
     document.getElementById('year-kali').textContent = new Date().getFullYear();
-    (function(){
-      const file = 'Installing a Kali Linux Virtual Machine Through VMWare.docx';
-      try{
-        const abs = new URL(file, window.location.href).href;
-        const viewer = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(abs);
-        document.getElementById('doc-viewer').src = viewer;
-      }catch(e){
-        document.getElementById('doc-viewer').remove();
-      }
-    })();
   </script>
 </body>
 </html>
