@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polymorphic Worms — DJ Wheeler</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="../index.html">DJ Wheeler</a></h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../samples.html">Writing Samples</a></li>
+          <li><a href="../resume.html">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>OriginalDocument.PolymorphicWorms</h2>
+    <p class="meta">Viewing: DOCX</p>
+    <div class="doc-preview-wrap">
+      <iframe id="doc-viewer" class="doc-preview" title="Document viewer"></iframe>
+    </div>
+
+    <p style="margin-top:0.75rem"><a class="btn" href="OriginalDocument.PolymorphicWorms.docx">Open original</a></p>
+
+    <section class="reflection">
+      <h3>Reflection</h3>
+      <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-box">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a class="btn" href="../about.html">About</a></li>
+            <li><a class="btn" href="../samples.html">Writing Samples</a></li>
+            <li><a class="btn" href="../resume.html">Résumé</a></li>
+          </ul>
+        </div>
+        <div class="footer-box contact-box">
+          <h4>Contact</h4>
+          <p><a class="btn" href="mailto:dxw334@psu.edu">dxw334@psu.edu</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="copyright">&copy; <span id="year-poly"></span> DJ Wheeler</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-poly').textContent = new Date().getFullYear();
+    (function(){
+      const file = 'OriginalDocument.PolymorphicWorms.docx';
+      try{
+        const abs = new URL(file, window.location.href).href;
+        const viewer = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(abs);
+        document.getElementById('doc-viewer').src = viewer;
+      }catch(e){
+        document.getElementById('doc-viewer').remove();
+      }
+    })();
+  </script>
+</body>
+</html>

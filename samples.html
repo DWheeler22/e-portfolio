@@ -24,20 +24,57 @@
     <h2>Writing Samples</h2>
     <p>Below are selected pieces representing coursework and published work. Replace the sample links with your actual files or hosted pieces.</p>
 
-    <ul class="samples-list">
-      <li>
-        <strong>Feature Essay: The Local News Project</strong>
-        <p>A long-form piece on community journalism. <a href="#">Open</a> • <a href="#">Download PDF</a></p>
-      </li>
-      <li>
-        <strong>Policy Analysis: Housing and Zoning</strong>
-        <p>An analytical paper with research and policy recommendations. <a href="#">Open</a></p>
-      </li>
-      <li>
-        <strong>Multimedia Story: Voices of the Campus</strong>
-        <p>Interactive story with audio and images. <a href="#">Open</a></p>
-      </li>
-    </ul>
+    <div class="samples-list">
+      <div class="sample-cards">
+        <article class="sample-card">
+          <a class="card-link" href="samples/applications.html" target="_self" rel="noopener">
+            <h4>Applications of Induction &amp; Recursion in Computer Science and Mathemetics</h4>
+            <div class="meta">DOCX • Hosted page</div>
+            <div class="doc-preview-wrap"><iframe class="doc-preview" src="samples/applications.html" loading="lazy" title="Preview: Applications of Induction &amp; Recursion"></iframe></div>
+          </a>
+          <div class="reflection">
+            <h4>Reflection</h4>
+            <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
+          </div>
+        </article>
+
+        <article class="sample-card">
+          <a class="card-link" href="samples/nittany.html" target="_self" rel="noopener">
+            <h4>Nittany Network Solutions – Centre County WAN Design</h4>
+            <div class="meta">DOCX • Hosted page</div>
+            <div class="doc-preview-wrap"><iframe class="doc-preview" src="samples/nittany.html" loading="lazy" title="Preview: Nittany Network Solutions"></iframe></div>
+          </a>
+          <div class="reflection">
+            <h4>Reflection</h4>
+            <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
+          </div>
+        </article>
+
+        <article class="sample-card">
+          <a class="card-link" href="samples/kali.html" target="_self" rel="noopener">
+            <h4>Installing a Kali Linux Virtual Machine Through VMWare</h4>
+            <div class="meta">DOCX • Hosted page</div>
+            <div class="doc-preview-wrap"><iframe class="doc-preview" src="samples/kali.html" loading="lazy" title="Preview: Installing a Kali Linux VM"></iframe></div>
+          </a>
+          <div class="reflection">
+            <h4>Reflection</h4>
+            <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
+          </div>
+        </article>
+
+        <article class="sample-card">
+          <a class="card-link" href="samples/polymorphic.html" target="_self" rel="noopener">
+            <h4>OriginalDocument.PolymorphicWorms</h4>
+            <div class="meta">DOCX • Hosted page</div>
+            <div class="doc-preview-wrap"><iframe class="doc-preview" src="samples/polymorphic.html" loading="lazy" title="Preview: Polymorphic Worms"></iframe></div>
+          </a>
+          <div class="reflection">
+            <h4>Reflection</h4>
+            <p>Placeholder reflection text — replace with your thoughts about this piece.</p>
+          </div>
+        </article>
+      </div>
+    </div>
 
     <p><a class="btn" href="index.html">Return Home</a></p>
   </main>
@@ -64,6 +101,25 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year-samples').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year-samples').textContent = new Date().getFullYear();
+
+    // Initialize Office viewer if possible. For local files this may require serving over HTTP.
+    (function(){
+      const iframes = document.querySelectorAll('.doc-preview');
+      iframes.forEach(iframe => {
+        const file = iframe.getAttribute('data-file');
+        if (!file) return;
+        try {
+          const abs = new URL(file, window.location.href).href;
+          const viewer = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(abs);
+          iframe.src = viewer;
+        } catch (e) {
+          // fallback: link remains clickable to open file
+          iframe.remove();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
