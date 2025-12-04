@@ -43,6 +43,7 @@ article{background:var(--card);padding:1rem;border-radius:6px;border:1px solid r
 .sample-card .meta{color:var(--muted);font-size:0.9rem}
 .doc-preview-wrap{background:#051015;border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)}
 .doc-preview{width:100%;height:220px;border:0;background:#071018}
+.card-thumb{width:100%;height:120px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,0.03);background:#021018}
 .reflection{margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed rgba(255,255,255,0.03);color:#cfeee6}
 .reflection p{margin:0.5rem 0 0 0;color:#9fb0af}
 

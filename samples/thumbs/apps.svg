@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="6" fill="#071018" />
+  <g fill="#00ff99" opacity="0.95">
+    <rect x="12" y="14" width="96" height="8" rx="2" />
+    <rect x="12" y="30" width="72" height="8" rx="2" />
+    <rect x="12" y="46" width="52" height="8" rx="2" />
+  </g>
+  <text x="10" y="76" font-size="6" fill="#9fb0af">Induction &amp; Recursion</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="6" fill="#071018" />
+  <g fill="#00ff99" opacity="0.95">
+    <circle cx="30" cy="40" r="10" />
+    <rect x="50" y="30" width="44" height="20" rx="3" />
+  </g>
+  <text x="10" y="76" font-size="6" fill="#9fb0af">Kali VM Guide</text>
+</svg>
