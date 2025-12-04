@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Résumé — DJ Wheeler</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">DJ Wheeler</a></h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="samples.html">Writing Samples</a></li>
+          <li><a href="resume.html">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Résumé</h2>
+    <p>You can link to a downloadable PDF here once available: <a href="#" download>Download PDF</a></p>
+
+    <section>
+      <h3>Education</h3>
+      <p>[Your University] — [Degree], Expected [Month Year]</p>
+    </section>
+
+    <section>
+      <h3>Experience</h3>
+      <p><strong>Editorial Intern</strong>, [Organization], [Dates]</p>
+      <ul>
+        <li>Edited and fact-checked stories for publication.</li>
+        <li>Conducted interviews and contributed reporting.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li>Research & writing</li>
+        <li>Editing & proofreading</li>
+        <li>Basic web publishing</li>
+      </ul>
+    </section>
+
+    <p><a class="btn" href="index.html">Return Home</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-box">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a class="btn" href="about.html">About</a></li>
+            <li><a class="btn" href="samples.html">Writing Samples</a></li>
+            <li><a class="btn" href="resume.html">Résumé</a></li>
+          </ul>
+        </div>
+        <div class="footer-box contact-box">
+          <h4>Contact</h4>
+          <p><a class="btn" href="mailto:dxw334@psu.edu">dxw334@psu.edu</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="copyright">&copy; <span id="year-resume"></span> DJ Wheeler</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-resume').textContent = new Date().getFullYear();</script>
+</body>
+</html>

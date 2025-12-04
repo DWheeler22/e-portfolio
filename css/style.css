@@ -1,0 +1,80 @@
+/* Simple responsive styles for the student e-portfolio */
+:root{
+  --max-width: 1000px;
+  --accent: #00ff99; /* neon/cyber green */
+  --muted: #9fb0af;
+  --bg: #0b1116; /* deep background */
+  --surface: #071018; /* slightly lighter for cards */
+  --card: #08141a;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;color:#e6f3ef;margin:0;background:var(--bg)}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:transparent;border-bottom:1px solid rgba(255,255,255,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+.site-title a{color:var(--accent);text-decoration:none;font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Roboto Mono',monospace}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:#cfeee6;text-decoration:none}
+.main-nav a:hover{color:var(--accent)}
+.hero{padding:2rem 1rem;background:linear-gradient(180deg,rgba(0,255,153,0.04),transparent);margin-bottom:1rem;border-left:4px solid rgba(0,255,153,0.15);border-radius:6px}
+.hero h2{margin:0 0 0.5rem 0;font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Roboto Mono',monospace;color:#dfffee}
+.hero-sub{color:var(--muted);margin-top:0}
+.btn{display:inline-block;background:transparent;color:var(--accent);padding:0.45rem 0.75rem;border-radius:5px;text-decoration:none;border:1px solid rgba(0,255,153,0.18)}
+.btn:hover{background:rgba(0,255,153,0.06)}
+.btn-alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfeee6}
+.grid{display:grid;gap:1rem}
+.feats{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+article{background:var(--card);padding:1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+.summary h3,.resume-preview h3,.contact-cta h3{margin-top:1.25rem;color:#dfffee}
+.site-footer{background:transparent;border-top:1px solid rgba(255,255,255,0.04);margin-top:2rem}
+.footer-inner{display:flex;gap:1rem;flex-wrap:wrap;padding:1rem}
+.footer-col{flex:1;min-width:180px;color:#cfeee6}
+.samples-list{list-style:none;padding:0}
+.samples-list li{background:var(--card);margin:0 0 0.75rem;padding:0.75rem;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+.samples-list a{color:#7fb3ff;text-decoration:none}
+.samples-list a:hover{color:#a6d1ff}
+
+@media (min-width:700px){
+  .container{padding:2rem}
+  .header-inner{padding:1rem 0}
+}
+
+/* Accessibly high contrast focus styles */
+a:focus{outline:3px solid rgba(0,255,153,0.18);outline-offset:2px}
+
+/* small subtle code-like captions */
+h4, h3{font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Roboto Mono',monospace}
+
+/* Email link styling (lighter blue for improved contrast) */
+a[href^="mailto:"]{color:#7fb3ff;font-weight:500;text-decoration:none}
+a[href^="mailto:"]:hover{color:#a6d1ff}
+
+/* Footer layout and spacing: clearer distinction between Quick Links and Contact */
+.site-footer{background:transparent;border-top:1px solid rgba(255,255,255,0.04);margin-top:2rem;padding-top:0.75rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;padding:0}
+.footer-left{display:flex;gap:2rem;flex-wrap:wrap}
+.footer-box{min-width:180px}
+.footer-box h4{margin:0 0 0.5rem 0;color:#dfffee}
+.footer-box ul{margin:0;padding:0;list-style:none}
+.footer-box ul li{margin:0 0 0.35rem}
+.contact-box p{margin:0}
+.footer-right{min-width:160px;display:flex;align-items:flex-end;justify-content:flex-end}
+.copyright{margin:0;color:#9fb0af}
+
+/* Smaller buttons in footer boxes */
+.footer-box .btn{padding:0.3rem 0.5rem;font-size:0.9rem}
+.footer-box ul li .btn{display:inline-block;width:auto}
+
+
+@media (max-width:600px){
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-right{align-self:flex-start}
+}
+
+/* Fallback styling for original footer markup (no HTML edits required) */
+.footer-inner{justify-content:space-between;align-items:flex-end}
+.footer-col{min-width:180px}
+.footer-col:first-child{margin-right:1.5rem}
+.footer-col:nth-child(2){padding-left:1rem;border-left:1px solid rgba(255,255,255,0.03)}
+.footer-col:last-child{margin-left:auto;display:flex;align-items:flex-end;justify-content:flex-end;text-align:right;color:#9fb0af}
+.footer-col a[href^="mailto:"]{color:#7fb3ff}
