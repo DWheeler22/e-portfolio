@@ -10,7 +10,9 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <h1 class="site-title"><a href="index.html">DJ Wheeler</a></h1>
+            <h1 class="site-title">
+                <a href="index.html">DJ Wheeler</a>
+            </h1>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="about.html">About</a></li>
@@ -23,16 +25,19 @@
 
     <main class="container">
         <section class="hero">
-            <h2>Security-Focused Communicator.</h2>
-            <p class="hero-sub">
-                Cybersecurity major at Penn State with internship experience in 
-                IT Support, Active Directory administration, and assessment of 
-                cybersecurity benchmarks. Leader in several team projects in risk 
-                analysis, computer networking, and IT/Enterprise Integration. Deep 
-                interest in ethical hacking with knowledge of operating systems, 
-                networking protocols, exploits and vulnerability scanners.
-            </p>
-            <p><a class="btn" href="samples.html">View Writing Samples</a> <a class="btn" href="resume.html">View Résumé</a></p>
+            <div class="hero-content">
+                <h2>Security-Focused Communicator.</h2>
+                <p class="hero-sub">
+                    Cybersecurity major at Penn State with internship experience in 
+                    IT Support, Active Directory administration, and assessment of 
+                    cybersecurity benchmarks. Leader in several team projects in risk 
+                    analysis, computer networking, and IT/Enterprise Integration. Deep 
+                    interest in ethical hacking with knowledge of operating systems, 
+                    networking protocols, exploits and vulnerability scanners.
+                </p>
+                <p><a class="btn" href="samples.html">View Writing Samples</a> <a class="btn" href="resume.html">View Résumé</a></p>
+            </div>
+            <img src="assets/headshot.jpg" alt="DJ Wheeler profile photo" class="hero-image">
         </section>
 
         <section class="summary">
@@ -100,4 +105,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+<script src="scripts/home_animation.js"></script>
 </html>
