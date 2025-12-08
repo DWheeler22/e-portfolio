@@ -34,8 +34,7 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
   to { border-color: transparent; }
 }
 
-
-.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;margin-top: 3rem;}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;margin-top: 4rem;}
 .main-nav a{color:#cfeee6;text-decoration:none;font-weight:500}
 .main-nav a:hover{color:var(--accent)}
 /* Style for the current page in the navigation */
@@ -43,12 +42,41 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
   color: var(--accent);
   font-weight: bold;
 }
-.hero{padding:3rem 1.5rem;background:var(--surface);margin-bottom:2rem;border:1px solid rgba(0,255,153,0.1);border-left:4px solid rgba(0,255,153,0.4);border-radius:8px;background-image:linear-gradient(160deg,rgba(0,255,153,0.07),transparent 50%)}
+
+/* Hero card section */
+/* Updated .hero section with flexbox for image layout */
+.hero{
+  padding:3rem 1.5rem;
+  background:var(--surface);
+  margin-bottom:2rem;
+  border:1px solid rgba(0,255,153,0.1);
+  border-left:4px solid rgba(0,255,153,0.4);
+  border-radius:8px;
+  background-image:linear-gradient(160deg,rgba(0,255,153,0.07),transparent 50%);
+  display:flex;
+  gap:2rem;
+  align-items:center;
+}
+.hero-content{
+  flex:1;
+}
+.hero-image{
+  width:200px;
+  height:200px;
+  border-radius:8px;
+  border:2px solid rgba(0,255,153,0.3);
+  box-shadow:0 0 20px rgba(0,255,153,0.15);
+  object-fit:cover;
+  background:var(--card);
+}
 .hero h2{margin:0 0 0.5rem 0;font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Roboto Mono',monospace;color:#dfffee}
 .hero-sub{color:var(--muted);margin-top:0}
+
+/* Button styles */
 .btn{display:inline-block;background:transparent;color:var(--accent);padding:0.45rem 0.75rem;border-radius:5px;text-decoration:none;border:1px solid rgba(0,255,153,0.18)}
 .btn:hover{background:rgba(0,255,153,0.06)}
 .btn-alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfeee6}
+
 .grid{display:grid;gap:1rem}
 .feats{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 article{background:var(--card);padding:1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
@@ -125,7 +153,8 @@ a[href*="linkedin.com"]:hover{background:#094fa3}
 @media (max-width:600px){
   .header-inner{flex-direction:column;gap:0.5rem}
   .main-nav ul{flex-wrap:wrap;justify-content:center}
-  .hero{padding:2rem 1rem}
+  .hero{padding:2rem 1rem;flex-direction:column}
+  .hero-image{width:150px;height:150px}
   .footer-inner{flex-direction:column;align-items:flex-start}
   .footer-right{align-self:flex-start}
   .sample-cards{grid-template-columns:1fr}
