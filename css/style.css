@@ -224,3 +224,24 @@ a[href*="linkedin.com"]:hover{background:#094fa3}
 .comparison-card .pdf-preview-container{
   height:700px;
 }
+
+/* Redesign button style - reusable across pages */
+.btn-redesign {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.15) 0%, rgba(255, 0, 255, 0.15) 100%);
+  color: #00ffff;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-redesign:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.25) 0%, rgba(255, 0, 255, 0.25) 100%);
+  color: #fff;
+  border-color: rgba(255, 0, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
