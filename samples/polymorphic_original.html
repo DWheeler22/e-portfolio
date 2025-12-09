@@ -6,6 +6,34 @@
   <title>Polymorphic Worms — DJ Wheeler</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .page-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .page-actions-right {
+      display: flex;
+      gap: 0.75rem;
+      margin-left: auto;
+    }
+    
+    @media (max-width: 600px) {
+      .page-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .page-actions-right {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -23,9 +51,16 @@
   </header>
 
   <main class="container">
-    <h2>Polymorphic Worms – Original vs. Redesign</h2>
-    <p class="meta">Viewing: Original PDF → Redesigned HTML</p>
-    <p><a class="btn btn-alt" href="../samples.html">← Back to Samples</a></p>
+    <h2>Polymorphic Worms – Original</h2>
+    <p class="meta">Viewing: PDF</p>
+    
+    <div class="page-actions">
+      <a class="btn btn-alt" href="../samples.html">← Back to Samples</a>
+      <div class="page-actions-right">
+        <a class="btn" href="./polymorphic.html">View Comparison →</a>
+        <a class="btn-redesign" href="./polymorphic_redesign.html">View Redesign →</a>
+      </div>
+    </div>
 
     <section class="reflection">
       <h3>Reflection</h3>
@@ -38,26 +73,14 @@
         this sample to demonstrate my skills in document design and my ability to adapt
         content for different formats while maintaining clarity and effectiveness.
       </p>
-    </section><br><br>
+    </section>
 
-    <div class="doc-comparison" style="margin-top: 2rem;">
-      <div class="doc-preview-wrap" style="flex: 1; margin: 0;">
-        <div class="doc-preview-controls">
-          <a class="btn" href="polymorphic_original.html">View Original</a>
-          <a class="btn" href="pdfs/Polymorphic Worms – Original.pdf" download>Download PDF</a>
-          <a class="btn btn-alt" href="Polymorphic Worms – Original.docx" download>Download DOCX</a>
-        </div>
-        <embed src="pdfs/Polymorphic Worms – Original.pdf" type="application/pdf" class="doc-preview" />
+    <div class="doc-preview-wrap">
+      <div class="doc-preview-controls">
+        <a class="btn" href="pdfs/Polymorphic Worms – Original.pdf" download>Download PDF</a>
+        <a class="btn btn-alt" href="Polymorphic Worms – Original.docx" download>Download DOCX</a>
       </div>
-      
-      <div class="comparison-arrow">→</div>
-      
-      <div class="doc-preview-wrap" style="flex: 1; margin: 0;">
-        <div class="doc-preview-controls">
-          <a class="btn-redesign" href="polymorphic_redesign.html">Open Redesign</a>
-        </div>
-        <iframe src="polymorphic_preview.html" class="doc-preview"></iframe>
-      </div>
+      <embed src="pdfs/Polymorphic Worms – Original.pdf" type="application/pdf" class="doc-preview" />
     </div>
 
     <p style="margin-top:1rem"><a class="btn" href="../index.html">Return Home</a></p>
