@@ -8,8 +8,38 @@
   --card: #08141a;
 }
 *{box-sizing:border-box}
+/* Base styles */
 body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;color:#e6f3ef;margin:0;background:var(--bg)}
+/* Container to center content and limit max width */
 .container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+/* Security-themed header banner */
+.site-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background-image: url('../assets/security_header_banner.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 1;
+}
+/* Header styles */
 .site-header{background:transparent;border-bottom:1px solid rgba(255,255,255,0.04)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
 .site-title a{color:var(--accent);text-decoration:none;font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Roboto Mono',monospace}
@@ -267,7 +297,7 @@ a[href*="linkedin.com"]:hover{background:#094fa3}
     height: 100%;
     min-height: 400px; /* Match container height */
   }
-
+}
 /* Show clickable overlay on mobile */
 @media (max-width: 768px) {
   /* Dim the embedded PDF preview on mobile */
