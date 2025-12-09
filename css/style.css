@@ -8,6 +8,12 @@
   --card: #08141a;
 }
 *{box-sizing:border-box}
+
+/* Hides the mobile PDF overlay on desktop */
+.mobile-pdf-overlay {
+  display: none; /* Hides on desktop */
+}
+
 /* Base styles */
 body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;color:#e6f3ef;margin:0;background:var(--bg)}
 /* Container to center content and limit max width */
@@ -38,6 +44,29 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
 .header-inner {
   position: relative;
   z-index: 1;
+}
+
+/* Mobile adjustments for banner */
+@media (max-width: 600px) {
+  .site-header::before {
+    height: 100px; /* Shorter on mobile */
+    opacity: 0.4; /* More subtle on mobile so text is easier to read */
+    background-size: 150% auto; /* Zoom in slightly to focus on center details */
+  }
+  
+  /* Add some padding so content doesn't overlap banner */
+  .header-inner {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 900px) and (min-width: 601px) {
+  .site-header::before {
+    height: 120px; /* Medium height for tablets */
+    opacity: 0.5;
+  }
 }
 /* Header styles */
 .site-header{background:transparent;border-bottom:1px solid rgba(255,255,255,0.04)}
@@ -152,10 +181,6 @@ article p a:hover {
 .reflection{margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed rgba(255,255,255,0.03);color:#cfeee6}
 .reflection p{margin:0.5rem 0 0 0;color:#9fb0af}
 
-/* Hides the mobile PDF overlay on desktop */
-.mobile-pdf-overlay {
-  display: none; /* Hides on desktop */
-}
 
 @media (min-width:700px){
   .container{padding:2rem}
