@@ -122,6 +122,10 @@ article p a:hover {
 .reflection{margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed rgba(255,255,255,0.03);color:#cfeee6}
 .reflection p{margin:0.5rem 0 0 0;color:#9fb0af}
 
+/* Hides the mobile PDF overlay on desktop */
+.mobile-pdf-overlay {
+  display: none; /* Hides on desktop */
+}
 
 @media (min-width:700px){
   .container{padding:2rem}
@@ -263,7 +267,14 @@ a[href*="linkedin.com"]:hover{background:#094fa3}
     height: 100%;
     min-height: 400px; /* Match container height */
   }
-  /* Show clickable overlay on mobile */
+
+/* Show clickable overlay on mobile */
+@media (max-width: 768px) {
+  /* Dim the embedded PDF preview on mobile */
+  .doc-preview {
+    pointer-events: none;
+    opacity: 0.3;
+  }
   .mobile-pdf-overlay {
     display: flex;
     position: absolute;
