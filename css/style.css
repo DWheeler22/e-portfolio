@@ -24,7 +24,7 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
   background: transparent;
   border-bottom: 1px solid rgba(255,255,255,0.04);
   position: relative;
-  overflow: hidden; /* Prevent banner overflow */
+  overflow: hidden;
 }
 
 .site-header::before {
@@ -33,7 +33,7 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
   top: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  bottom: 0; /* Changed from fixed height - now fills entire header */
   background-image: url('../assets/security-banner.svg');
   background-size: cover;
   background-position: center center;
@@ -52,36 +52,25 @@ body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Aria
 /* Mobile adjustments for banner */
 @media (max-width: 600px) {
   .site-header::before {
-    height: 80px; /* Much shorter on mobile */
+    /* Remove fixed height - let it fill the header naturally */
     opacity: 0.3; /* More subtle so text is readable */
-    background-size: cover; /* Ensure full coverage */
-    background-position: center center;
   }
   
   /* Ensure header content is visible and spaced properly */
   .header-inner {
     padding: 1rem;
-    min-height: 80px; /* Match banner height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   
   /* Make sure site title is readable */
   .site-title a {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   }
 }
 
 /* Tablet adjustments */
 @media (max-width: 900px) and (min-width: 601px) {
   .site-header::before {
-    height: 110px;
     opacity: 0.45;
-  }
-  
-  .header-inner {
-    min-height: 110px;
   }
 }
 /* Header styles */
