@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
-  <rect width="120" height="80" rx="6" fill="#071018" />
-  <g stroke="#00ff99" stroke-width="2" fill="none">
-    <path d="M10 60 L35 35 L60 50 L85 25 L110 45" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="10" y="76" font-size="6" fill="#9fb0af">WAN Design</text>
-</svg>
